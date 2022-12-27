@@ -24,7 +24,8 @@ namespace EmployeeWageComputationProblem
                                   "4.SwitchCaseStatement" + "\n " +
                                   "5.MonthWages" + "\n" +
                                   "6.TotalMonthlyWorkingHours" + "\n" +
-                                  "7.Exit" + "\n");
+                                  "7.RefactorEmployeeWageClass" + "\n " +
+                                  "8.Exit" + "\n");
                 int check = Convert.ToInt32(Console.ReadLine());
                 switch (check)
                 {
@@ -53,6 +54,10 @@ namespace EmployeeWageComputationProblem
                         totalMonthlyWorkingHours.TotalMonthlyWages();
                         break;
                     case 7:
+                        EmployeeWageProblem refactorEmployeeWageClassMethod = new EmployeeWageProblem();
+                        refactorEmployeeWageClassMethod.RefactorEmployeeWageClass();
+                        break;
+                    case 8:
                         flag = false;
                         break;
                 }
