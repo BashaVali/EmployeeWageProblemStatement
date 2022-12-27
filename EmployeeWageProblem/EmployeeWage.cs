@@ -94,6 +94,21 @@ namespace EmployeeWageComputationProblem
                 monthlyEmpWage = Working_Day * empHrs;
                 Console.WriteLine("Daily Emp Wage for a Month :" + monthlyEmpWage);
             }
+        //UC6-TotalMonthlyWages
+        public void TotalMonthlyWages()
+        {
+            int day = 0, hours = 0, DailyEmpWage = 0, EmpWage = 0;
+            while (day < 20 & hours < 100)
+            {
+                day++;
+                hours += 8;
+
+            }
+            EmpWage = day * hours;
+            DailyEmpWage = Wage_per_Hour * EmpWage;
+            Console.WriteLine("Employee TotalMonthlyWorkingHours Wage :" + DailyEmpWage);
+
+        }
 
     }
 }
