@@ -42,6 +42,21 @@ namespace EmployeeWageComputationProblem
             dailyEmpWage = Full_Day_Hour * Per_hour;
             Console.WriteLine("Daily Emp Wage Full Day :" + dailyEmpWage);
         }
+        //UC-3
+        //Assume Wage per Hour is 20
+        //Assume ParTime  Hour is 4
+        public void PartTimeEmpWage()
+        {
+            int dailyEmpWage = 0, empHrs = 0;
+            int empCheck = random.Next(0, 2);
+            if (empCheck == Part_Time_Hour)
+                empHrs = Per_hour;
+            else
+                empHrs = 0;
+            dailyEmpWage = Part_Time_Hour * Per_hour;
+            Console.WriteLine("Daily Emp Wage Full Day :" + dailyEmpWage);
+        }
     }
+
 }
     
