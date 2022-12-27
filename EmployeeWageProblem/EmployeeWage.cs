@@ -28,5 +28,20 @@ namespace EmployeeWageComputationProblem
                 Console.WriteLine("Employee is present");
             }
         }
+        //UC-2
+        //Assume Wage per Hour is 20
+        //Assume Full day hour is 8
+        public void DailyEmployeeWage()
+        {
+            int dailyEmpWage = 0, empHrs = 0;
+            int empCheck = random.Next(0, 2);
+            if (empCheck == Full_Day_Hour)
+                empHrs = Per_hour;
+            else
+                empHrs = 0;
+            dailyEmpWage = Full_Day_Hour * Per_hour;
+            Console.WriteLine("Daily Emp Wage Full Day :" + dailyEmpWage);
+        }
     }
 }
+    
