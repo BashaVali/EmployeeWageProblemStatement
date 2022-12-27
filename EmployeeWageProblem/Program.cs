@@ -21,7 +21,8 @@ namespace EmployeeWageComputationProblem
                 Console.WriteLine("1.Attendance" + "\n" +
                                   "2.DailyEmployeeWage" + "\n" +
                                   "3.PartTimeEmployeeWage" + "\n" +
-                                  "4.Exit" + "\n");
+                                  "4.SwitchCaseStatement" + "\n" +
+                                  "5.Exit" + "\n");
                 int check = Convert.ToInt32(Console.ReadLine());
                 switch (check)
                 {
@@ -38,6 +39,10 @@ namespace EmployeeWageComputationProblem
                         partTimeEmployeeWage.PartTimeEmpWage();
                         break;
                     case 4:
+                        EmployeeWageProblem switchCaseStatement = new EmployeeWageProblem();
+                        switchCaseStatement.SwitchCase();
+                        break;
+                    case 5:
                         flag = false;
                         break;
                 }

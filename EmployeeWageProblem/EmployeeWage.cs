@@ -56,7 +56,29 @@ namespace EmployeeWageComputationProblem
             dailyEmpWage = Part_Time_Hour * Per_hour;
             Console.WriteLine("Daily Emp Wage Full Day :" + dailyEmpWage);
         }
-    }
+        public void SwitchCase()
+        {
+            int dailyEmpWage = 0;
+            int empCheck = random.Next(0, 2);
+            Console.WriteLine("Randomly Selected The Full_Day_Hour & Part_Time_Hour ");
+            switch (empCheck)
+            {
 
+                case 0:
+                    dailyEmpWage = Full_Day_Hour * Per_hour;
+                    Console.WriteLine("Daily Emp Wage Full Day :" + dailyEmpWage);
+                    break;
+                case 1:
+                    dailyEmpWage = Part_Time_Hour * Per_hour;
+                    Console.WriteLine("Daily Emp Wage Part Time :" + dailyEmpWage);
+                    break;
+                default:
+                    Console.WriteLine("Employee is absent");
+                    break;
+            }
+        }
+    }
 }
+
+
     
