@@ -56,6 +56,8 @@ namespace EmployeeWageComputationProblem
             dailyEmpWage = Part_Time_Hour * Per_hour;
             Console.WriteLine("Daily Emp Wage Full Day :" + dailyEmpWage);
         }
+        //UC-4
+        // Using-Switch Case 
         public void SwitchCase()
         {
             int dailyEmpWage = 0;
