@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EmployeeWageComputationProblem
+﻿namespace EmployeeWageComputationProblem
 {
     public class Program
     {
@@ -25,7 +19,8 @@ namespace EmployeeWageComputationProblem
                                   "5.MonthWages" + "\n" +
                                   "6.TotalMonthlyWorkingHours" + "\n" +
                                   "7.RefactorEmployeeWageClass" + "\n " +
-                                  "8.Exit" + "\n");
+                                  "8.EmployeeWageMultipleCompanies" + "\n " +
+                                  "9.Exit" + "\n");
                 int check = Convert.ToInt32(Console.ReadLine());
                 switch (check)
                 {
@@ -58,6 +53,15 @@ namespace EmployeeWageComputationProblem
                         refactorEmployeeWageClassMethod.RefactorEmployeeWageClass();
                         break;
                     case 8:
+                        Console.WriteLine("Welcome to employee wage computation");
+                        EmployeeWageProblem employeeWageMultipleCompany = new EmployeeWageProblem();
+                        employeeWageMultipleCompany.ComputeWage("Accenture", 60, 50, 90);
+                        EmployeeWageProblem employeeWageMultipleCompany1 = new EmployeeWageProblem();
+                        employeeWageMultipleCompany1.ComputeWage("TCS", 65, 55, 95);
+                        EmployeeWageProblem employeeWageMultipleCompany2 = new EmployeeWageProblem();
+                        employeeWageMultipleCompany2.ComputeWage("CapGemini", 70, 75, 100);
+                        break;
+                    case 9:
                         flag = false;
                         break;
                 }

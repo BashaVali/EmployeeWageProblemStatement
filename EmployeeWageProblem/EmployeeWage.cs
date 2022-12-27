@@ -114,6 +114,7 @@ namespace EmployeeWageComputationProblem
             Console.WriteLine("Employee TotalMonthlyWorkingHours Wage :" + DailyEmpWage);
 
         }
+        //UC7-Refactor Class
         public void RefactorEmployeeWageClass()
         {
             //Variables
@@ -148,9 +149,55 @@ namespace EmployeeWageComputationProblem
             }
             int totalEmpWage = totalEmpHrs * EMP_RATE_PER_HOUR;
             Console.WriteLine("Total Emp Wage :" + totalEmpWage);
-
         }
-    }
+
+
+            public void ComputeWage(string company, int wage_per_hour, int max_working_days, int maxHoursPerMonth)
+            {
+                int empHours = 0;
+                int empDailyWage = 0;
+                int workingDays = 1;
+                int workingHrs = 0;
+                int totalWage = 0;
+                //Creating a Random Function
+                Random random = new Random();
+
+                while (workingDays <= max_working_days && workingHrs <= maxHoursPerMonth)
+                {
+                    //Calling the next method in Random Class
+                    int empInput = random.Next(0, 3);
+                    switch (empInput)
+                    {
+                        case IS_FULL_TIME:
+                            // Console.WriteLine("Employee is present for full-time");
+                            empHours = 8;
+                            break;
+                        case IS_PART_TIME:
+                            //Console.WriteLine("Employee is present for part-time");
+                            empHours = 4;
+                            break;
+                        default:
+                            //Console.WriteLine("Employee is absent");
+                            break;
+
+                    }
+                    empDailyWage = empHours * wage_per_hour;
+                    totalWage += empDailyWage;
+                    workingHrs += empHours;
+                    if (empInput != 0)
+                    {
+                        workingDays++;
+
+                    }
+                    Console.WriteLine("Company Name:" + company);
+                    Console.WriteLine("Working Hours :" + workingHrs);
+                    Console.WriteLine("Employee Wage Per day :" + empDailyWage);
+                    Console.WriteLine("Working days in a month :" + workingDays);
+                    Console.WriteLine("Employee Wage for Total working days :" + totalWage);
+                }
+
+            }
+        }
 }
 
     
