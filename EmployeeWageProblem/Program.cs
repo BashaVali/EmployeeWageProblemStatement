@@ -1,6 +1,6 @@
 ﻿namespace EmployeeWageComputationProblem
 {
-    public class Program
+    public class Programs
     {
         public static void Main(string[] args)
         {
@@ -20,7 +20,8 @@
                                   "6.TotalMonthlyWorkingHours" + "\n" +
                                   "7.RefactorEmployeeWageClass" + "\n " +
                                   "8.EmployeeWageMultipleCompanies" + "\n " +
-                                  "9.Exit" + "\n");
+                                  "9.TotalWageForEachCompany" + "\n" +
+                                  "10.Exit" + "\n");
                 int check = Convert.ToInt32(Console.ReadLine());
                 switch (check)
                 {
@@ -62,6 +63,15 @@
                         employeeWageMultipleCompany2.ComputeWage("CapGemini", 70, 75, 100);
                         break;
                     case 9:
+
+                        EmployeeWageProblem program = new EmployeeWageProblem();
+                        program.EmployeeWage("Infosys", 80, 12, 90);
+                        program.ComputeWage();
+                        EmployeeWageProblem wipro = new EmployeeWageProblem();
+                        wipro.EmployeeWage("TCS", 55, 22, 110);
+                        wipro.ComputeWage();
+                        break;
+                    case 10:
                         flag = false;
                         break;
                 }
